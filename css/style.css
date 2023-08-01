@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "yekan";
+    src: url(../fonts/yekan.eot);
+    src: url(../fonts/yekan.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/yekan.ttf) format('truetype'),
+    url(../fonts/yekan.woff) format('woff');
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    direction: rtl;
+    font-family: "yekan";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #ffccbc;
+}
+.action{
+    top: 25%;
+    right: 50%;
+    position: fixed;
+    transform: translateX(50%);
+}
+.action .profile{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.action .profile img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.action .menu{
+    position: absolute;
+    top: 100px;
+    right: 0;    
+    background: #fff;
+    width: 400px;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: ease all 0.5s;
+}
+.action .menu.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.action .menu::before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: -10px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+.action .menu h3{
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eaeaea;
+}
+.action .menu h3 span{
+    font-size: 14px;
+    color: #b4b4b4;
+}
+.action .menu ul{
+    width: 100%;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0 30px
+}
+.action .menu ul li{
+    padding: 5px 0;
+}
+.action .menu ul li a{
+    text-decoration: none;
+    color: #333;
+}
