@@ -1,3 +1,7 @@
+/*
+Copyright amir javanmir
+Released on: august 1, 2023
+*/
 let profile = document.getElementById("profile");
 profile.onclick = function(){
     if(this.nextElementSibling.classList.contains("menu")){
